@@ -31,6 +31,9 @@ textarea{width:100%;background:#0a0a14;border:1px solid #33335e;color:#e8e8f0;bo
 footer{text-align:center;padding:2rem;color:#666688;border-top:1px solid #1a1a2e}
 footer a{color:#7c6bff}
 </style>
+<meta property="og:image" content="https://nano-gpt-llm.vercel.app/og.png">
+<meta name="twitter:image" content="https://nano-gpt-llm.vercel.app/og.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <div class="hero">
@@ -51,7 +54,8 @@ footer a{color:#7c6bff}
 <h2>How It Works</h2>
 <p style="color:#a0a0c0">Text → tokens → embeddings → 2 transformer layers (attention + MLP) → next-character probabilities. Full code in the <a href="https://github.com/HVRGAMING2705/nano-gpt-llm" style="color:#7c6bff">GitHub repo</a>.</p>
 </section>
-<footer><p>Built by <a href="https://vikranthreddy.vercel.app">Vikranth Reddy Hardageri</a></p></footer>
+<footer><p>Built by <a href="https://vikranthreddy.vercel.app">Vikranth Reddy Hardageri</a></p><span class="fleet-legal" style="display:block;text-align:center;padding:10px 0;font-size:13px"><a href="/legal.html">Privacy · Terms</a></span>
+</footer>
 <script>
 let W=null;
 async function load(){W=await(await fetch('weights.json')).json();}
@@ -76,5 +80,6 @@ async function generate(){
  }
 }
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
