@@ -4,12 +4,12 @@
 <meta name="google-site-verification" content="5EchCsH88JXnn0Mc55I8joYV6mial9rsc4G8c0eg4Ls" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NanoGPT — Build an LLM from Scratch | Vikranth Reddy</title>
+<title>NanoGPT: Build an LLM from Scratch | Vikranth Reddy</title>
 <meta name="description" content="Build a real GPT-style large language model from scratch in pure NumPy. No frameworks. Train a character-level transformer and generate text live. By Vikranth Reddy.">
 <meta name="author" content="Vikranth Reddy Hardageri">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nano-gpt-llm.vercel.app/">
-<meta property="og:title" content="NanoGPT — Build an LLM from Scratch">
+<meta property="og:title" content="NanoGPT: Build an LLM from Scratch">
 <meta property="og:description" content="A real character-level transformer LLM in pure NumPy with live browser demo.">
 <meta property="og:url" content="https://nano-gpt-llm.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,10 +19,10 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0a0f;color:#e8e8f0;line-height:1.6}
-.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;background:radial-gradient(ellipse at 50% 30%,#1a1a3e 0%,#0a0a0f 70%)}
-.hero h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:800;background:linear-gradient(135deg,#7c6bff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;background:radial-gradient(ellipse at 50% 30%,#14141f 0%,#0a0a0f 70%)}
+.hero h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:800;color:#e8e8f0}
 .hero p{color:#a0a0c0;max-width:600px;margin:1rem 0 2rem}
-.btn{background:linear-gradient(135deg,#7c6bff,#00d4ff);color:#fff;border:none;padding:1rem 2.5rem;font-size:1.1rem;border-radius:12px;cursor:pointer;font-weight:600}
+.btn{background:#7c6bff;color:#fff;border:none;padding:1rem 2.5rem;font-size:1.1rem;border-radius:12px;cursor:pointer;font-weight:600}
 section{max-width:1000px;margin:0 auto;padding:3rem 2rem}
 h2{font-size:1.8rem;margin-bottom:1rem}
 .demo-box{background:#12121e;border:1px solid #2a2a4e;border-radius:16px;padding:2rem;margin-top:1rem}
@@ -31,14 +31,11 @@ textarea{width:100%;background:#0a0a14;border:1px solid #33335e;color:#e8e8f0;bo
 footer{text-align:center;padding:2rem;color:#666688;border-top:1px solid #1a1a2e}
 footer a{color:#7c6bff}
 </style>
-<meta property="og:image" content="https://nano-gpt-llm.vercel.app/og.png">
-<meta name="twitter:image" content="https://nano-gpt-llm.vercel.app/og.png">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <div class="hero">
 <h1>NanoGPT</h1>
-<p>An LLM built from scratch. Pure NumPy. No frameworks — just math. A real character-level transformer you can train and run.</p>
+<p>An LLM built from scratch. Pure NumPy. No frameworks, just math. A real character-level transformer you can train and run.</p>
 <button class="btn" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Try Live Demo</button>
 </div>
 <section id="demo">
@@ -54,8 +51,7 @@ footer a{color:#7c6bff}
 <h2>How It Works</h2>
 <p style="color:#a0a0c0">Text → tokens → embeddings → 2 transformer layers (attention + MLP) → next-character probabilities. Full code in the <a href="https://github.com/HVRGAMING2705/nano-gpt-llm" style="color:#7c6bff">GitHub repo</a>.</p>
 </section>
-<footer><p>Built by <a href="https://vikranthreddy.vercel.app">Vikranth Reddy Hardageri</a></p><span class="fleet-legal" style="display:block;text-align:center;padding:10px 0;font-size:13px"><a href="/legal.html">Privacy · Terms</a></span>
-</footer>
+<footer><p>Built by <a href="https://vikranthreddy.vercel.app">Vikranth Reddy Hardageri</a></p></footer>
 <script>
 let W=null;
 async function load(){W=await(await fetch('weights.json')).json();}
@@ -80,6 +76,5 @@ async function generate(){
  }
 }
 </script>
-<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
